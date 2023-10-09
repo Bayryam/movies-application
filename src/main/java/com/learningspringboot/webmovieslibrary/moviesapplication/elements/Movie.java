@@ -1,5 +1,12 @@
 package com.learningspringboot.webmovieslibrary.moviesapplication.elements;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.learningspringboot.webmovieslibrary.moviesapplication.users.User;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
+import org.hibernate.annotations.Fetch;
+
 import java.time.LocalDate;
 
 public class Movie
@@ -15,6 +22,10 @@ public class Movie
     private int imdbId;
     private int year;
     private String genre;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JsonIgnore
+    private User user;
 
     public Movie(String title, String description, int rating,
                  LocalDate releaseDate, String director, String writer,
@@ -74,6 +85,10 @@ public class Movie
 
     public String getGenre() {
         return genre;
+    }
+
+    public User getUser() {
+        return user;
     }
 
     @Override

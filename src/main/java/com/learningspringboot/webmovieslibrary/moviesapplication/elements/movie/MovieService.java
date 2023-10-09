@@ -13,7 +13,7 @@ import java.util.function.Predicate;
 @Service
 public class MovieService
 {
-    private static List<Movie> movies = new ArrayList<Movie>();
+    private final static List<Movie> movies = new ArrayList<Movie>();
 
     static{
         movies.add(new Movie("Titanic","Tragic accident in the ocean",
