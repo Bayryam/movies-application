@@ -1,7 +1,10 @@
 package com.learningspringboot.webmovieslibrary.moviesapplication.elements;
 
+import jakarta.persistence.Entity;
+
 import java.util.ArrayList;
 
+@Entity
 public class Season
 {
     private int number;

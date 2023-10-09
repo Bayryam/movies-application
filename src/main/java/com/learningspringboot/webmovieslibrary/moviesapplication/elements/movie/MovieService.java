@@ -1,6 +1,5 @@
 package com.learningspringboot.webmovieslibrary.moviesapplication.elements.movie;
 
-import com.learningspringboot.webmovieslibrary.moviesapplication.elements.Movie;
 import com.learningspringboot.webmovieslibrary.moviesapplication.elements.Season;
 import com.learningspringboot.webmovieslibrary.moviesapplication.elements.TVShow;
 import org.springframework.stereotype.Service;

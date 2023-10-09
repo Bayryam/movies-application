@@ -1,14 +1,12 @@
-package com.learningspringboot.webmovieslibrary.moviesapplication.elements;
+package com.learningspringboot.webmovieslibrary.moviesapplication.elements.movie;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.learningspringboot.webmovieslibrary.moviesapplication.users.User;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 import org.hibernate.annotations.Fetch;
 
 import java.time.LocalDate;
-
+@Entity
 public class Movie
 {
     private String title;
@@ -19,6 +17,8 @@ public class Movie
     private String writer;
     private int stars;
     private long duration;
+    @Id
+    @GeneratedValue
     private int imdbId;
     private int year;
     private String genre;

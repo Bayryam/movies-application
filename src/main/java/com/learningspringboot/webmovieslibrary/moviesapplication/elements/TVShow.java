@@ -1,8 +1,12 @@
 package com.learningspringboot.webmovieslibrary.moviesapplication.elements;
 
+import com.learningspringboot.webmovieslibrary.moviesapplication.elements.movie.Movie;
+import jakarta.persistence.Entity;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 
+//@Entity
 public class TVShow extends Movie
 {
     private ArrayList<Season> seasons;

@@ -1,15 +1,19 @@
 package com.learningspringboot.webmovieslibrary.moviesapplication.users;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.learningspringboot.webmovieslibrary.moviesapplication.elements.Movie;
+import com.learningspringboot.webmovieslibrary.moviesapplication.elements.movie.Movie;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
-import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@Component
+@Entity
 public class User
 {
+    @Id
+    @GeneratedValue
 private Integer id;
 private String name;
 @OneToMany(mappedBy = "user")
